@@ -4,10 +4,10 @@
       class="header"
     >
       <div>
-        <img
-          src="@/svg/logo.svg"
+        <div
+          ref="logo"
           class="logo"
-        >
+        ></div>
       </div>
       <div class="logo-text">
         Terra infinity
@@ -20,6 +20,7 @@
       <div class="fullpage-container">
         <div
           v-fullpage="opts"
+          ref="fullpage"
           class="fullpage-wp"
         >
           <div
@@ -28,7 +29,10 @@
             :class="[page.class]"
             class="page" 
           >
-            <div v-animate="{value: 'fadeInUp'}">
+            <div
+              v-animate="{value: animation}"
+              :ref="'page' + i"
+            >
               <div
                 v-html="page.title"
                 class="title"
@@ -36,6 +40,10 @@
               <div
                 v-html="page.desk"
                 class="desk"
+              ></div>
+              <div
+                v-html="page.desk.replace(/\<br\/\>/g, ' ')"
+                class="desk desk-mobile"
               ></div>
               <div v-animate="{value: 'fadeInUp', delay: 900}">
                 <div
@@ -56,6 +64,9 @@
 </template>
 
 <script>
+import lottie from 'lottie-web';
+import pagesData from '@/assets/data/pages.json';
+
 import ScrollButton from '@/components/ScrollButton.vue';
 import TechBlock from '@/components/TechBlock.vue';
 
@@ -64,80 +75,59 @@ export default {
     ScrollButton,
     TechBlock
   },
+
   data() {
     return {
-      pages: [
-        {
-          title: 'Digitalization<br/>and user experiennce',
-          class: 'page-1',
-          desk: `
-            Using our multi industry experience we will analyse<br/>
-            your status quo and help you build new digital<br/>
-            solutions for your business, which will give you<br/>
-            that edge over your competitors.<br/>
-            Great user experience is increasingly important<br/>
-            in the modern world - we will help you to achieve<br/>
-            the magic.
-          `,
-          actionText: 'write us:',
-          email: 'dugitalize@terrainfinity.com'
-        },
-        {
-          title: 'Remote<br/>product team',
-          class: 'page-2',
-          desk: `
-            According to your needs we will build in a very short<br/>
-            time frame a near-shore remote team of the excellent<br/>
-            professionals, which will solve your problem and<br/>
-            deliver a solution.<br/>
-            We will be responsible for setting up agile processes<br/>
-            and will guide the team. Outsourcing has never been<br/>
-            easier.
-          `,
-          actionText: 'Get in touch:',
-          email: 'remote@terrainfinity.com'
-        },
-        {
-          title: 'Software<br/>development',
-          class: 'page-3',
-          desk: `
-            Over the years we created different software with different<br/>
-            technologies for different purposes. For small companies<br/>
-            and for big enterprises. From games to financial solutions.<br/>
-            We are proud to have some of the biggest companies in the<br/>
-            world among our customers. Our mobile apps won multiply<br/>
-            awards and were featured many times by Apple.<br/>
-          `,
-          actionText: 'Click here:',
-          email: 'software@terrainfinity.com'
-        },
-        {
-          title: 'Software<br/>development',
-          class: 'page-4',
-          desk: `
-            We excel in doing research and prototypes.<br/>
-            We have years of experience in different areas: apps,<br/>
-            branding, ux, finance, games, video and more.<br/>
-            If you got an idea, a problem, not sure how to proceed, need<br/>
-            to get a feeling for something - we will help.<br/>
-          `,
-          actionText: 'Write here:',
-          email: 'rd@terrainfinity.com'
-        }
-      ],
+      pages: [],
+
+      animation: 'fadeInUp',
 
       opts: {
         start: 0,
         dir: 'v',
+        der : 0.1,
+        movingFlag : false,
         duration: 500,
-        beforeChange: (prev, next) => {},
+        beforeChange: (prev, current, next) => {
+          //this.animationDirection(current, next);
+        },
         afterChange: (prev, next) => {}
       }
     }
+  },
+
+  methods: {
+    animationDirection(current, next) {
+      if (current < next) {
+        this.animation = 'fadeInUp';
+      } else {
+        this.animation = 'fadeInDown';
+      }
+      this.$refs.fullpage.$fullpage.$update();
+    },
+
+    pageWidth() {
+      return document.width;
+    }
+  },
+
+  created() {
+    this.pages = pagesData;
+  },
+
+  mounted() {
+    lottie.loadAnimation({
+      container: this.$refs.logo,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: './terra_logo.json'
+    });
   }
 }
 </script>
 
 <style lang="scss">
   @import "./css/main.css";
+  @import "./css/media.scss";
 </style>

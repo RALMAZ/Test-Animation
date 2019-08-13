@@ -30,17 +30,21 @@ export default {
     right: 80px;
     bottom: 0;
     z-index: 100;
-    width: 280px;
+    width: 300px;
     height: 410px;
     background-color: white;
     padding: 20px 25px;
     text-transform: uppercase;
     font-size: 16px;
     line-height: 0.8;
+    -webkit-box-shadow: 20px 20px 30px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 20px 20px 30px 0px rgba(0,0,0,0.2);
+    box-shadow: 20px 20px 30px 0px rgba(0,0,0,0.2);
   }
 
   .tech-black {
     color: black;
+    font-family: "Cartograph Sans";
   }
 
   .tech-blue {
@@ -49,5 +53,6 @@ export default {
 
   .tech-orange {
     color: rgb(243, 94, 40);
+    font-family: "Cartograph Sans Medium";
   }
 </style>

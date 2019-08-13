@@ -1,0 +1,126 @@
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 1650px) {
+  .tech-block {
+    display: none;
+  }
+  .scroll-downs {
+    display: none;
+  }
+  .page {
+    padding-top: 40px;
+    padding-left: 40px;
+  }
+  
+  .page div {
+    align-self: center;
+    align-items: center;
+    justify-self: center;
+  }
+  
+  .title {
+    font-size: 60px;
+  }
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .title {
+    font-size: 45px;
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .title {
+    font-size: 34px;
+  }
+
+  .header {
+    padding: 10px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .desk-mobile {
+    display: none;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .title {
+    font-size: 27px;
+  }
+
+  .page div {
+    align-self: normal;
+  }
+
+  .desk {
+    font-size: 14px;
+    padding-top: 24px;
+    display: none;
+  }
+
+  .desk-mobile {
+    display: block;
+  }
+
+  .page1 div .desk-mobile {
+    color: black;
+  }
+  
+  .page div {
+    align-self: top;
+    align-items: top;
+    justify-self: top;
+  }
+
+  .action {
+    font-size: 14px;
+    padding-top: 28px;
+  }
+  
+  .email {
+    font-size: 14px;
+  }
+
+  .logo {
+    width: 110px;
+    margin-left: -10px;
+  }
+
+  .logo-title {
+    font-size: 27px;
+  }
+  
+  .header {
+    padding: 20px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  .header div {
+    align-self: left;
+    align-items: left;
+    justify-self: left;
+  }
+
+  .page {
+    padding: 60px 21px;
+  }
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+
+}

@@ -14,6 +14,11 @@
 }
 
 @font-face {
+  font-family: "Cartograph Sans Medium";
+  src: url(../assets/font/CartographSans/CartographSansCF-Medium.ttf);
+}
+
+@font-face {
   font-family: "Cartograph Sans Thin";
   src: url(../assets/font/CartographSans/CartographSansCF-Thin.ttf);
 }
@@ -41,9 +46,9 @@ html, body {
 }
 
 .logo-text {
-  font-family: "Cartograph Sans";
+  font-family: "Cartograph Sans Medium";
   font-size: 20px;
-  color: #262284;
+  color: #03007A;
   text-transform: uppercase;
 }
 
@@ -90,9 +95,10 @@ html, body {
 }
 
 .title {
-  font-size: 65px;
+  font-size: 72px;
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 1.2;
   color: black;
 }
 
@@ -110,27 +116,29 @@ html, body {
 
 .desk {
   font-size: 22px;
-  font-weight: 700;
   color: blue;
-  padding-top: 30px;
-  line-height: 1.5;
+  padding-top: 54px;
+  line-height: 1.7;
+  font-family: "Cartograph Sans Medium";
+}
+
+.desk-mobile {
+  color: black;
 }
 
 .page-2 .desk {
-  color: #63B2FF;
+  color: #63f2ff;
   font-family: "Cartograph Sans Thin";
 }
 
 .page-3 .desk {
   color: #CFF9FF;
-  font-size: 18px;
   line-height: 2;
   font-family: "Cartograph Sans Thin";
 }
 
 .page-4 .desk {
   color: #CFF9FF;
-  font-size: 18px;
   line-height: 2;
   font-family: "Cartograph Sans Thin";
 }
@@ -138,10 +146,9 @@ html, body {
 .action {
   font-family: "Cartograph Sans Heavy";
   font-size: 20px;
-  font-weight: 700;
   text-transform: uppercase;
   color: black;
-  padding-top: 100px;
+  padding-top: 108px;
 }
 
 .page-2 .action {
@@ -158,25 +165,21 @@ html, body {
 
 .email {
   font-size: 22px;
-  font-weight: 700;
-  color: blue;
+  color: #0000FF;
   padding-top: 10px;
 }
 
 .page-2 .email {
-  color: #ECCF52;
+  color: rgb(255, 217, 0);
   font-family: "Cartograph Sans Thin";
-  font-weight: 700;
 }
 
 .page-3 .email {
   color: #87D985;
   font-family: "Cartograph Sans Thin";
-  font-weight: 700;
 }
 
 .page-4 .email {
-  color: #ECCF52;
+  color: rgb(255, 217, 0);
   font-family: "Cartograph Sans Thin";
-  font-weight: 700;
 }

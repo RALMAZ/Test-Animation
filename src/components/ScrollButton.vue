@@ -15,10 +15,10 @@ export default {
 <style>
   .scroll-downs {
     position: absolute;
-    top: 200px;
+    top: 335px;
     right: 0;
     bottom: 0;
-    left: 100px;
+    left: 135px;
     z-index: 100;
     width :34px;
     height: 55px;
@@ -40,7 +40,7 @@ export default {
     border-radius: 25%;
     background-color: #fff;
     animation-name: scroll;
-    animation-duration: 2.2s;
+    animation-duration: 1.2s;
     animation-timing-function: cubic-bezier(.15,.41,.69,.94);
     animation-iteration-count: infinite;
   }
