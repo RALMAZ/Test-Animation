@@ -21,7 +21,7 @@
         <div
           v-fullpage="opts"
           ref="fullpage"
-          class="fullpage-wp"
+          class="fullpage-wp view-pc"
         >
           <div
             v-for="(page, i) in pages"
@@ -29,6 +29,7 @@
             :class="[page.class]"
             class="page" 
           >
+
             <div
               v-animate="{value: animation}"
               :ref="'page' + i"
@@ -43,9 +44,9 @@
               ></div>
               <div
                 v-html="page.desk.replace(/\<br\/\>/g, ' ')"
-                class="desk desk-mobile"
+                class="desk-mobile"
               ></div>
-              <div v-animate="{value: 'fadeInUp', delay: 900}">
+              <div v-animate="{value: animation, delay: 900}">
                 <div
                   v-text="page.actionText"
                   class="action"
@@ -56,8 +57,57 @@
                 ></div>
               </div>
             </div>
+
           </div>
         </div>
+        
+        <div
+          v-fullpage="opts"
+          ref="fullpage"
+          class="fullpage-wp view-mobile"
+        >
+          <div
+            v-for="(page, i) in mobile"
+            :key="i"
+            :class="[page.class]"
+            class="page" 
+          >
+
+            <div
+              v-animate="{value: animation}"
+              :ref="'page' + i"
+            >
+              <div
+                v-html="page.title"
+                class="title"
+              ></div>
+              <div
+                v-html="page.desk"
+                class="desk"
+              ></div>
+              <div
+                v-html="page.mobile"
+                class="desk-mobile"
+              ></div>
+              <div
+                v-html="page.desk.replace(/\<br\/\>/g, ' ')"
+                class="desk-mobile"
+              ></div>
+              <div v-animate="{value: animation, delay: 900}">
+                <div
+                  v-text="page.actionText"
+                  class="action"
+                ></div>
+                <div
+                  v-text="page.email"
+                  class="email"
+                ></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -66,9 +116,11 @@
 <script>
 import lottie from 'lottie-web';
 import pagesData from '@/assets/data/pages.json';
+import mobileData from '@/assets/data/mobile.json';
 
 import ScrollButton from '@/components/ScrollButton.vue';
 import TechBlock from '@/components/TechBlock.vue';
+import { log } from 'util';
 
 export default {
   components: {
@@ -79,6 +131,7 @@ export default {
   data() {
     return {
       pages: [],
+      mobile: [],
 
       animation: 'fadeInUp',
 
@@ -113,6 +166,7 @@ export default {
 
   created() {
     this.pages = pagesData;
+    this.mobile = mobileData;
   },
 
   mounted() {
@@ -123,6 +177,8 @@ export default {
       autoplay: true,
       path: './terra_logo.json'
     });
+
+    console.log(this.$refs.fullpage.$fullpage);
   }
 }
 </script>

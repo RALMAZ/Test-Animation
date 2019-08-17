@@ -1,0 +1,38 @@
+[  
+  {  
+     "title":"Digitalization<br/>& user experiennce",
+     "class":"page-1",
+     "desk":"Using our multi industry experience we will analyse<br/>your status quo and help you build new digital<br/>solutions for your business, which will give you<br/>that edge over your competitors.<br/>Great user experience is increasingly important<br/>in the modern world - we will help you to achieve<br/>the magic.",
+     "actionText":"write us:",
+     "email":"dugitalize@terrainfinity.com"
+  },
+  {  
+     "title":"",
+     "class":"page-0",
+     "mobile":"<div class=tech-page><p class=tech-blue>Working with</p><p class=tech-blue>DAX30 companies</p><p class=tech-orange>Featured multiple times</p><p class=tech-blue>on Apple's appstore</p><p class=tech-blue>award winning apps</p><br/><p class=tech-black>{ Technologies:</p><p class=tech-orange>Ionic, react, angular, java,</p><p class=tech-orange>kotlin, swift, objective c,</p><p class=tech-orange>python, ruby, .net,</p><p class=tech-orange>node, scala,</p><p class=tech-blue>CI, CD, automated testing,</p><p class=tech-orange>kubernetes, docker,</p><p class=tech-orange>AWS, Azure <span class=tech-black>}</span></p></div>",
+     "desk": "",
+     "actionText":"",
+     "email":""
+  },
+  {  
+     "title":"Remote<br/>product team",
+     "class":"page-2",
+     "desk":"According to your needs we will build in a very short<br/>time frame a near-shore remote team of the excellent<br/>professionals, which will solve your problem and<br/>deliver a solution.<br/>We will be responsible for setting up agile processes<br/>and will guide the team. Outsourcing has never been<br/>easier.",
+     "actionText":"Get in touch:",
+     "email":"remote@terrainfinity.com"
+  },
+  {  
+     "title":"Software<br/>development",
+     "class":"page-3",
+     "desk":"Over the years we created different software with different<br/>technologies for different purposes. For small companies<br/>and for big enterprises. From games to financial solutions.<br/>We are proud to have some of the biggest companies in the<br/>world among our customers. Our mobile apps won multiply<br/>awards and were featured many times by Apple.",
+     "actionText":"Click here:",
+     "email":"software@terrainfinity.com"
+  },
+  {  
+     "title":"Software<br/>development",
+     "class":"page-4",
+     "desk":"We excel in doing research and prototypes.<br/>We have years of experience in different areas: apps,<br/>branding, ux, finance, games, video and more.<br/>If you got an idea, a problem, not sure how to proceed, need<br/>to get a feeling for something - we will help.",
+     "actionText":"Write here:",
+     "email":"rd@terrainfinity.com"
+  }
+]

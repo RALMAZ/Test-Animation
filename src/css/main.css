@@ -33,21 +33,9 @@ html, body {
   margin: 0 auto;
 }
 
-.logo {
-  width: 180px;
-}
-
-.header {
-  padding: 30px 70px;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 1fr 9fr;
-  align-items: center;
-}
-
 .logo-text {
   font-family: "Cartograph Sans Medium";
-  font-size: 20px;
+  font-size: 24px;
   color: #03007A;
   text-transform: uppercase;
 }
@@ -65,18 +53,6 @@ html, body {
   height: 100vh;
 }
 
-.page {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 1fr;
-  align-items: top;
-  text-align: left;
-  font-size: 26px;
-  color: #eee;
-  padding-top: 100px;
-  padding-left: 260px;
-}
-
 .page-1 {
   background: #f2f2f2;
   color: black;
@@ -84,6 +60,7 @@ html, body {
 
 .page-2 {
   background: #0200FF;
+  color: #eee;
 }
 
 .page-3 {
@@ -92,14 +69,7 @@ html, body {
 
 .page-4 {
   background: #ff4301;
-}
-
-.title {
-  font-size: 72px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1.2;
-  color: black;
+  color: #eee;
 }
 
 .page-2 .title {
@@ -112,18 +82,6 @@ html, body {
 
 .page-4 .title {
   color:black;
-}
-
-.desk {
-  font-size: 22px;
-  color: blue;
-  padding-top: 54px;
-  line-height: 1.7;
-  font-family: "Cartograph Sans Medium";
-}
-
-.desk-mobile {
-  color: black;
 }
 
 .page-2 .desk {
@@ -143,14 +101,6 @@ html, body {
   font-family: "Cartograph Sans Thin";
 }
 
-.action {
-  font-family: "Cartograph Sans Heavy";
-  font-size: 20px;
-  text-transform: uppercase;
-  color: black;
-  padding-top: 108px;
-}
-
 .page-2 .action {
   color: white;
 }
@@ -161,12 +111,6 @@ html, body {
 
 .page-4 .action {
   color: white;
-}
-
-.email {
-  font-size: 22px;
-  color: #0000FF;
-  padding-top: 10px;
 }
 
 .page-2 .email {
