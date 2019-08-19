@@ -44,7 +44,7 @@ export default {
 
   .tech-black {
     color: black;
-    font-family: "Cartograph Sans";
+    font-family: "Cartograph Sans Bold";
   }
 
   .tech-blue {

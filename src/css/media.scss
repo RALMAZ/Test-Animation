@@ -191,6 +191,9 @@ $screen-xxl-min: 1440px;
       @include sm {
         color: black;
       }
+      @include lg {
+        color: #0000FF;
+      }
     }
   } 
 }

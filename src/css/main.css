@@ -4,7 +4,7 @@
 }
 
 @font-face {
-  font-family: "Cartograph Sans";
+  font-family: "Cartograph Sans Bold";
   src: url(../assets/font/CartographSans/CartographSansCF-Bold.ttf);
 }
 
@@ -29,7 +29,7 @@ html, body {
 }
 
 #app {
-  font-family: "Cartograph Sans";
+  font-family: "Cartograph Sans Bold";
   margin: 0 auto;
 }
 
